@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace TransporteWebApi.Controllers
 {
-    [Route("api/v1/[controller]")]
+    [Route("api/[controller]")]
     [ApiController]
     public class CompaniaTransporteController : ControllerBase
     {

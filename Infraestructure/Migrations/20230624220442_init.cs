@@ -7,7 +7,7 @@
 namespace Infraestructure.Migrations
 {
     /// <inheritdoc />
-    public partial class DBRestaurant : Migration
+    public partial class init : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -143,9 +143,9 @@ namespace Infraestructure.Migrations
                 columns: new[] { "TransporteId", "CompaniaTransporteId", "TipoTransporteId" },
                 values: new object[,]
                 {
-                    { 1, 1, 2 },
-                    { 2, 3, 3 },
-                    { 3, 5, 1 }
+                    { 1, 5, 1 },
+                    { 2, 1, 2 },
+                    { 3, 3, 3 }
                 });
 
             migrationBuilder.InsertData(
@@ -153,9 +153,11 @@ namespace Infraestructure.Migrations
                 columns: new[] { "CaracteristicaTransporteId", "CaracteristicaId", "TransporteId", "Valor" },
                 values: new object[,]
                 {
-                    { 1, 1, 3, "50" },
-                    { 2, 2, 2, "SemiCama" },
-                    { 3, 3, 1, "300 km/h" }
+                    { 1, 1, 1, "50" },
+                    { 2, 1, 2, "60" },
+                    { 3, 2, 2, "SemiCama" },
+                    { 4, 1, 3, "360" },
+                    { 5, 3, 3, "300 km/h" }
                 });
 
             migrationBuilder.CreateIndex(

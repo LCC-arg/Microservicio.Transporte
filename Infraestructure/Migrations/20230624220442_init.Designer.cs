@@ -11,8 +11,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Infraestructure.Migrations
 {
     [DbContext(typeof(TransporteContext))]
-    [Migration("20230516214121_DBRestaurant")]
-    partial class DBRestaurant
+    [Migration("20230624220442_init")]
+    partial class init
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -91,21 +91,35 @@ namespace Infraestructure.Migrations
                         {
                             CaracteristicaTransporteId = 1,
                             CaracteristicaId = 1,
-                            TransporteId = 3,
+                            TransporteId = 1,
                             Valor = "50"
                         },
                         new
                         {
                             CaracteristicaTransporteId = 2,
+                            CaracteristicaId = 1,
+                            TransporteId = 2,
+                            Valor = "60"
+                        },
+                        new
+                        {
+                            CaracteristicaTransporteId = 3,
                             CaracteristicaId = 2,
                             TransporteId = 2,
                             Valor = "SemiCama"
                         },
                         new
                         {
-                            CaracteristicaTransporteId = 3,
+                            CaracteristicaTransporteId = 4,
+                            CaracteristicaId = 1,
+                            TransporteId = 3,
+                            Valor = "360"
+                        },
+                        new
+                        {
+                            CaracteristicaTransporteId = 5,
                             CaracteristicaId = 3,
-                            TransporteId = 1,
+                            TransporteId = 3,
                             Valor = "300 km/h"
                         });
                 });
@@ -232,20 +246,20 @@ namespace Infraestructure.Migrations
                         new
                         {
                             TransporteId = 1,
+                            CompaniaTransporteId = 5,
+                            TipoTransporteId = 1
+                        },
+                        new
+                        {
+                            TransporteId = 2,
                             CompaniaTransporteId = 1,
                             TipoTransporteId = 2
                         },
                         new
                         {
-                            TransporteId = 2,
+                            TransporteId = 3,
                             CompaniaTransporteId = 3,
                             TipoTransporteId = 3
-                        },
-                        new
-                        {
-                            TransporteId = 3,
-                            CompaniaTransporteId = 5,
-                            TipoTransporteId = 1
                         });
                 });
 

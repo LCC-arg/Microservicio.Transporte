@@ -35,9 +35,9 @@ namespace Infraestructure
                 new CompaniaTransporte { CompaniaTransporteId = 6, Cuit = "156789456", RazonSocial = "Aerolineas Argentinas"}
                 );
             modelBuilder.Entity<Transporte>().HasData(
-               new Transporte { TransporteId = 1, CompaniaTransporteId = 1, TipoTransporteId = 2 },
-               new Transporte { TransporteId = 2, CompaniaTransporteId = 3, TipoTransporteId = 3 },
-               new Transporte { TransporteId = 3, CompaniaTransporteId = 5, TipoTransporteId = 1 }
+               new Transporte { TransporteId = 1, CompaniaTransporteId = 5, TipoTransporteId = 1 }, // Avion
+               new Transporte { TransporteId = 2, CompaniaTransporteId = 1, TipoTransporteId = 2 }, // Micro
+               new Transporte { TransporteId = 3, CompaniaTransporteId = 3, TipoTransporteId = 3 }  // Tren
                );
             modelBuilder.Entity<Caracteristica>().HasData(
                new Caracteristica { CaracteristicaId = 1, Descripcion = "Cantidad de Asientos" },
@@ -45,9 +45,11 @@ namespace Infraestructure
                new Caracteristica { CaracteristicaId = 3, Descripcion = "Velocidad Maxima" }
                );
             modelBuilder.Entity<CaracteristicaTransporte>().HasData(
-               new CaracteristicaTransporte { CaracteristicaTransporteId = 1, CaracteristicaId = 1, TransporteId = 3, Valor = "50" },
-               new CaracteristicaTransporte { CaracteristicaTransporteId = 2, CaracteristicaId = 2, TransporteId = 2, Valor = "SemiCama" },
-               new CaracteristicaTransporte { CaracteristicaTransporteId = 3, CaracteristicaId = 3, TransporteId = 1, Valor = "300 km/h" }
+               new CaracteristicaTransporte { CaracteristicaTransporteId = 1, CaracteristicaId = 1, TransporteId = 1, Valor = "50" },
+               new CaracteristicaTransporte { CaracteristicaTransporteId = 2, CaracteristicaId = 1, TransporteId = 2, Valor = "60" },
+               new CaracteristicaTransporte { CaracteristicaTransporteId = 3, CaracteristicaId = 2, TransporteId = 2, Valor = "SemiCama" },
+               new CaracteristicaTransporte { CaracteristicaTransporteId = 4, CaracteristicaId = 1, TransporteId = 3, Valor = "360" },
+               new CaracteristicaTransporte { CaracteristicaTransporteId = 5, CaracteristicaId = 3, TransporteId = 3, Valor = "300 km/h" }
                );
 
             modelBuilder.Entity<Caracteristica>()
