@@ -57,9 +57,9 @@ namespace TransporteWebApi.Controllers
 
         [HttpGet]
         [ProducesResponseType(typeof(CaracteristicaTransporteResponse), 200)]
-        public IActionResult GetAllCaracteristicaTransporte()
+        public IActionResult GetAllCaracteristicaTransporte([FromQuery] int? idTransporte = null, int? idCaracteristica = null)
         {
-            var result = _caracteristicaTransporteService.GetAllCaracteristicaTransporte();
+            var result = _caracteristicaTransporteService.GetAllCaracteristicaTransporte(idTransporte, idCaracteristica);
             return new JsonResult(result);
         }
 

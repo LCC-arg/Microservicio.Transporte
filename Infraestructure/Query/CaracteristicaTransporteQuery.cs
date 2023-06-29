@@ -13,9 +13,19 @@ namespace Infraestructure.Query
             _context = context;
         }
 
-        public List<CaracteristicaTransporte> GetAllCaracteristicaTransporte()
+        public List<CaracteristicaTransporte> GetAllCaracteristicaTransporte(int? idTransporte, int? idCaracteristica)
         {
-            var ListaCaracteristicaTransporte = _context.CaracteristicaTransporte
+            IQueryable<CaracteristicaTransporte> query = _context.CaracteristicaTransporte;
+
+            if (idTransporte != null)
+            {
+                query = query.Where(t => t.TransporteId == idTransporte);
+            }
+            if (idCaracteristica != null)
+            {
+                query = query.Where(t => t.CaracteristicaId == idCaracteristica);
+            }
+            var ListaCaracteristicaTransporte = query
                 .Include(c => c.Caracteristica)
                 .Include(c => c.Transporte)
                 .OrderBy(c => c.CaracteristicaTransporteId).ToList();

@@ -9,7 +9,7 @@ namespace Application.Interfaces.ICaracteristicaTransporte
 {
     public interface ICaracteristicaTransporteQuery
     {
-        List<CaracteristicaTransporte> GetAllCaracteristicaTransporte();
+        List<CaracteristicaTransporte> GetAllCaracteristicaTransporte(int? idTransporte = null, int? idCaracteristica = null);
         CaracteristicaTransporte GetCaracteristicaTransporteById(int caracteristicaTransporteId);
     }
 }

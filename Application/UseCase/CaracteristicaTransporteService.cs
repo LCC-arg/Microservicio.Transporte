@@ -47,10 +47,24 @@ namespace Application.UseCase
             };
         }
 
-        public List<CaracteristicaTransporteResponse> GetAllCaracteristicaTransporte()
+        public List<CaracteristicaTransporteResponse> GetAllCaracteristicaTransporte(int? idTransporte = null, int? idCaracteristica = null)
         {
+            if (idCaracteristica != null)
+            {
+                bool ExisteCaracteristicaId = _caracteristicaQuery.GetAllCaracteristicas().Any(m => m.CaracteristicaId == idCaracteristica);
+                if (!ExisteCaracteristicaId) { throw new ValorBadRequestException(" No existe una caracteristica registrada en la base de datos con ese ID"); }
+
+            }
+            if (idTransporte != null)
+            {
+                bool ExisteTransporteId = _transporteQuery.GetAllTransporte().Any(m => m.TransporteId == idTransporte);
+                if (!ExisteTransporteId) { throw new ValorBadRequestException(" No existe un transporte registrado en la base de datos con ese ID"); }
+            }
+
+
+
             List<CaracteristicaTransporteResponse> listaCaracteristicaTransporteResponse = new List<CaracteristicaTransporteResponse>();
-            var lista = _query.GetAllCaracteristicaTransporte();
+            var lista = _query.GetAllCaracteristicaTransporte(idTransporte, idCaracteristica);
             foreach (var caracteristicaTransporte in lista)
             {
                 var caracTransporteResponse = new CaracteristicaTransporteResponse
@@ -108,7 +122,7 @@ namespace Application.UseCase
 
             var caracteristicaTransporte = _command.ActualizeCaracteristicaTransporte(caracteristicaTransporteId, caracteristicaTransporteRequest);
 
-            return  new CaracteristicaTransporteResponse
+            return new CaracteristicaTransporteResponse
             {
                 Id = caracteristicaTransporte.CaracteristicaTransporteId,
                 CaracteristicaId = caracteristicaTransporte.CaracteristicaId,
