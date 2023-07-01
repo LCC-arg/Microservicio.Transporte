@@ -10,5 +10,6 @@ namespace Application.Request
     {
         public string Cuit { get; set; }
         public string RazonSocial { get; set; }
+        public string Imagen { get; set; }
     }
 }

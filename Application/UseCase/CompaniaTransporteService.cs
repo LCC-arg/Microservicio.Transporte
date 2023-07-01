@@ -30,13 +30,15 @@ namespace Application.UseCase
             {
                 Cuit = companiaRequest.Cuit,
                 RazonSocial = companiaRequest.RazonSocial,
+                ImagenLogo = companiaRequest.Imagen
             };
             _command.InsertCompaniaTransporte(compania);
             return new CompaniaTransporteResponse
             {
                 Id = compania.CompaniaTransporteId,
                 Cuit = compania.Cuit,
-                RazonSocial = compania.RazonSocial
+                RazonSocial = compania.RazonSocial,
+                Imagen = compania.ImagenLogo
             };
         }
 
@@ -50,7 +52,8 @@ namespace Application.UseCase
                 {
                     Cuit = compania.Cuit,
                     RazonSocial = compania.RazonSocial,
-                    Id = compania.CompaniaTransporteId
+                    Id = compania.CompaniaTransporteId,
+                    Imagen = compania.ImagenLogo
                 };
                 listaCompaniaResponse.Add(companiaResponse);
             }

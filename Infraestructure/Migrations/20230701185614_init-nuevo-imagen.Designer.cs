@@ -11,8 +11,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Infraestructure.Migrations
 {
     [DbContext(typeof(TransporteContext))]
-    [Migration("20230629190441_precargaData")]
-    partial class precargaData
+    [Migration("20230701185614_init-nuevo-imagen")]
+    partial class initnuevoimagen
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -1082,6 +1082,10 @@ namespace Infraestructure.Migrations
                         .HasMaxLength(50)
                         .HasColumnType("nvarchar");
 
+                    b.Property<string>("ImagenLogo")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("RazonSocial")
                         .IsRequired()
                         .HasMaxLength(50)
@@ -1096,36 +1100,42 @@ namespace Infraestructure.Migrations
                         {
                             CompaniaTransporteId = 1,
                             Cuit = "0147852369",
+                            ImagenLogo = "https://upload.wikimedia.org/wikipedia/commons/5/5e/Plusmar_logo.png",
                             RazonSocial = "PLUSMAR"
                         },
                         new
                         {
                             CompaniaTransporteId = 2,
                             Cuit = "15615612232",
+                            ImagenLogo = "https://www.nuevachevallier.com/wp-content/uploads/2018/09/chevallier-logo.png",
                             RazonSocial = "Chevalier"
                         },
                         new
                         {
                             CompaniaTransporteId = 3,
                             Cuit = "21561665662",
+                            ImagenLogo = "https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Ferrocarriles_Argentinos.svg/1280px-Ferrocarriles_Argentinos.svg.png",
                             RazonSocial = "Sarmiento SRL"
                         },
                         new
                         {
                             CompaniaTransporteId = 4,
                             Cuit = "123456789",
+                            ImagenLogo = "https://yt3.googleusercontent.com/r2dUpnRqDqQ8g-P17-UTpv5LZ7SuJGBNxto_Wp-OCwnJ9q0saSxGs1GQyov8LNftLYNJExTiqw=s900-c-k-c0x00ffffff-no-rj",
                             RazonSocial = "Roca"
                         },
                         new
                         {
                             CompaniaTransporteId = 5,
                             Cuit = "1561232",
+                            ImagenLogo = "https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Despegar.com_logo.svg/1280px-Despegar.com_logo.svg.png",
                             RazonSocial = "Despegar"
                         },
                         new
                         {
                             CompaniaTransporteId = 6,
                             Cuit = "156789456",
+                            ImagenLogo = "https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Aerol%C3%ADneas_Argentinas_Logo_2010.svg/512px-Aerol%C3%ADneas_Argentinas_Logo_2010.svg.png",
                             RazonSocial = "Aerolineas Argentinas"
                         });
                 });
