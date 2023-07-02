@@ -11,8 +11,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Infraestructure.Migrations
 {
     [DbContext(typeof(TransporteContext))]
-    [Migration("20230701185614_init-nuevo-imagen")]
-    partial class initnuevoimagen
+    [Migration("20230702175855_init")]
+    partial class init
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -1107,7 +1107,7 @@ namespace Infraestructure.Migrations
                         {
                             CompaniaTransporteId = 2,
                             Cuit = "15615612232",
-                            ImagenLogo = "https://www.nuevachevallier.com/wp-content/uploads/2018/09/chevallier-logo.png",
+                            ImagenLogo = "https://www.centraldepasajes.com.ar/empresas-de-micro/img/logos/chevallier-logo.png",
                             RazonSocial = "Chevalier"
                         },
                         new

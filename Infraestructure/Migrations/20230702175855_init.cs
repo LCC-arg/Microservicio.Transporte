@@ -7,7 +7,7 @@
 namespace Infraestructure.Migrations
 {
     /// <inheritdoc />
-    public partial class initnuevoimagen : Migration
+    public partial class init : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -122,7 +122,7 @@ namespace Infraestructure.Migrations
                 values: new object[,]
                 {
                     { 1, "0147852369", "https://upload.wikimedia.org/wikipedia/commons/5/5e/Plusmar_logo.png", "PLUSMAR" },
-                    { 2, "15615612232", "https://www.nuevachevallier.com/wp-content/uploads/2018/09/chevallier-logo.png", "Chevalier" },
+                    { 2, "15615612232", "https://www.centraldepasajes.com.ar/empresas-de-micro/img/logos/chevallier-logo.png", "Chevalier" },
                     { 3, "21561665662", "https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Ferrocarriles_Argentinos.svg/1280px-Ferrocarriles_Argentinos.svg.png", "Sarmiento SRL" },
                     { 4, "123456789", "https://yt3.googleusercontent.com/r2dUpnRqDqQ8g-P17-UTpv5LZ7SuJGBNxto_Wp-OCwnJ9q0saSxGs1GQyov8LNftLYNJExTiqw=s900-c-k-c0x00ffffff-no-rj", "Roca" },
                     { 5, "1561232", "https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Despegar.com_logo.svg/1280px-Despegar.com_logo.svg.png", "Despegar" },

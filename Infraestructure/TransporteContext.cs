@@ -28,7 +28,7 @@ namespace Infraestructure
                 );
             modelBuilder.Entity<CompaniaTransporte>().HasData(
                 new CompaniaTransporte { CompaniaTransporteId = 1, Cuit = "0147852369", RazonSocial = "PLUSMAR" , ImagenLogo= "https://upload.wikimedia.org/wikipedia/commons/5/5e/Plusmar_logo.png" },
-                new CompaniaTransporte { CompaniaTransporteId = 2, Cuit = "15615612232", RazonSocial = "Chevalier" , ImagenLogo= "https://www.nuevachevallier.com/wp-content/uploads/2018/09/chevallier-logo.png" },
+                new CompaniaTransporte { CompaniaTransporteId = 2, Cuit = "15615612232", RazonSocial = "Chevalier" , ImagenLogo= "https://www.centraldepasajes.com.ar/empresas-de-micro/img/logos/chevallier-logo.png" },
                 new CompaniaTransporte { CompaniaTransporteId = 3, Cuit = "21561665662", RazonSocial = "Sarmiento SRL" , ImagenLogo= "https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Ferrocarriles_Argentinos.svg/1280px-Ferrocarriles_Argentinos.svg.png" },
                 new CompaniaTransporte { CompaniaTransporteId = 4, Cuit = "123456789", RazonSocial = "Roca" , ImagenLogo= "https://yt3.googleusercontent.com/r2dUpnRqDqQ8g-P17-UTpv5LZ7SuJGBNxto_Wp-OCwnJ9q0saSxGs1GQyov8LNftLYNJExTiqw=s900-c-k-c0x00ffffff-no-rj" },
                 new CompaniaTransporte { CompaniaTransporteId = 5, Cuit = "1561232", RazonSocial = "Despegar" , ImagenLogo= "https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Despegar.com_logo.svg/1280px-Despegar.com_logo.svg.png" },

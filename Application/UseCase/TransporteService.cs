@@ -68,7 +68,8 @@ namespace Application.UseCase
                     {
                         Id = transporte.CompaniaTransporteId,
                         RazonSocial = transporte.CompaniaTransporte.RazonSocial,
-                        Cuit = transporte.CompaniaTransporte.Cuit
+                        Cuit = transporte.CompaniaTransporte.Cuit,
+                        Imagen = transporte.CompaniaTransporte.ImagenLogo
                     }
                 };
                 listaTransporteGetResponses.Add(transporteGetResponse);
@@ -95,7 +96,8 @@ namespace Application.UseCase
                 {
                     Id = transporte.CompaniaTransporteId,
                     RazonSocial = transporte.CompaniaTransporte.RazonSocial,
-                    Cuit = transporte.CompaniaTransporte.Cuit
+                    Cuit = transporte.CompaniaTransporte.Cuit,
+                    Imagen = transporte.CompaniaTransporte.ImagenLogo
                 }
             };  
         }
