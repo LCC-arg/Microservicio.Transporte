@@ -89,14 +89,14 @@ namespace Infraestructure.Migrations
                             CaracteristicaTransporteId = 1,
                             CaracteristicaId = 1,
                             TransporteId = 1,
-                            Valor = "50"
+                            Valor = "300"
                         },
                         new
                         {
                             CaracteristicaTransporteId = 2,
                             CaracteristicaId = 1,
                             TransporteId = 2,
-                            Valor = "60"
+                            Valor = "85"
                         },
                         new
                         {
@@ -110,7 +110,7 @@ namespace Infraestructure.Migrations
                             CaracteristicaTransporteId = 4,
                             CaracteristicaId = 1,
                             TransporteId = 3,
-                            Valor = "360"
+                            Valor = "250"
                         },
                         new
                         {
@@ -124,7 +124,7 @@ namespace Infraestructure.Migrations
                             CaracteristicaTransporteId = 6,
                             CaracteristicaId = 1,
                             TransporteId = 4,
-                            Valor = "30"
+                            Valor = "300"
                         },
                         new
                         {
@@ -145,7 +145,7 @@ namespace Infraestructure.Migrations
                             CaracteristicaTransporteId = 9,
                             CaracteristicaId = 1,
                             TransporteId = 5,
-                            Valor = "40"
+                            Valor = "350"
                         },
                         new
                         {
@@ -166,7 +166,7 @@ namespace Infraestructure.Migrations
                             CaracteristicaTransporteId = 12,
                             CaracteristicaId = 1,
                             TransporteId = 6,
-                            Valor = "10"
+                            Valor = "275"
                         },
                         new
                         {
@@ -187,14 +187,14 @@ namespace Infraestructure.Migrations
                             CaracteristicaTransporteId = 15,
                             CaracteristicaId = 1,
                             TransporteId = 7,
-                            Valor = "40"
+                            Valor = "300"
                         },
                         new
                         {
                             CaracteristicaTransporteId = 16,
                             CaracteristicaId = 2,
                             TransporteId = 7,
-                            Valor = "Asiento Económico"
+                            Valor = "Asiento Econ贸mico"
                         },
                         new
                         {
@@ -208,7 +208,7 @@ namespace Infraestructure.Migrations
                             CaracteristicaTransporteId = 18,
                             CaracteristicaId = 1,
                             TransporteId = 8,
-                            Valor = "45"
+                            Valor = "290"
                         },
                         new
                         {
@@ -229,7 +229,7 @@ namespace Infraestructure.Migrations
                             CaracteristicaTransporteId = 21,
                             CaracteristicaId = 1,
                             TransporteId = 9,
-                            Valor = "20"
+                            Valor = "350"
                         },
                         new
                         {
@@ -250,7 +250,7 @@ namespace Infraestructure.Migrations
                             CaracteristicaTransporteId = 24,
                             CaracteristicaId = 1,
                             TransporteId = 10,
-                            Valor = "10"
+                            Valor = "330"
                         },
                         new
                         {
@@ -271,7 +271,7 @@ namespace Infraestructure.Migrations
                             CaracteristicaTransporteId = 27,
                             CaracteristicaId = 1,
                             TransporteId = 11,
-                            Valor = "5"
+                            Valor = "280"
                         },
                         new
                         {
@@ -292,14 +292,14 @@ namespace Infraestructure.Migrations
                             CaracteristicaTransporteId = 30,
                             CaracteristicaId = 1,
                             TransporteId = 12,
-                            Valor = "50"
+                            Valor = "250"
                         },
                         new
                         {
                             CaracteristicaTransporteId = 31,
                             CaracteristicaId = 2,
                             TransporteId = 12,
-                            Valor = "Asiento Económico"
+                            Valor = "Asiento Econ贸mico"
                         },
                         new
                         {
@@ -313,14 +313,14 @@ namespace Infraestructure.Migrations
                             CaracteristicaTransporteId = 33,
                             CaracteristicaId = 1,
                             TransporteId = 13,
-                            Valor = "45"
+                            Valor = "350"
                         },
                         new
                         {
                             CaracteristicaTransporteId = 34,
                             CaracteristicaId = 2,
                             TransporteId = 13,
-                            Valor = "Asiento Económico"
+                            Valor = "Asiento Econ贸mico"
                         },
                         new
                         {
@@ -334,14 +334,14 @@ namespace Infraestructure.Migrations
                             CaracteristicaTransporteId = 36,
                             CaracteristicaId = 1,
                             TransporteId = 14,
-                            Valor = "60"
+                            Valor = "280"
                         },
                         new
                         {
                             CaracteristicaTransporteId = 37,
                             CaracteristicaId = 2,
                             TransporteId = 14,
-                            Valor = "Asiento Económico"
+                            Valor = "Asiento Econ贸mico"
                         },
                         new
                         {
@@ -355,7 +355,7 @@ namespace Infraestructure.Migrations
                             CaracteristicaTransporteId = 39,
                             CaracteristicaId = 1,
                             TransporteId = 15,
-                            Valor = "30"
+                            Valor = "300"
                         },
                         new
                         {
@@ -376,7 +376,7 @@ namespace Infraestructure.Migrations
                             CaracteristicaTransporteId = 42,
                             CaracteristicaId = 1,
                             TransporteId = 16,
-                            Valor = "30"
+                            Valor = "315"
                         },
                         new
                         {
@@ -397,7 +397,7 @@ namespace Infraestructure.Migrations
                             CaracteristicaTransporteId = 45,
                             CaracteristicaId = 1,
                             TransporteId = 17,
-                            Valor = "25"
+                            Valor = "265"
                         },
                         new
                         {
@@ -418,7 +418,7 @@ namespace Infraestructure.Migrations
                             CaracteristicaTransporteId = 48,
                             CaracteristicaId = 1,
                             TransporteId = 18,
-                            Valor = "35"
+                            Valor = "310"
                         },
                         new
                         {
@@ -439,7 +439,7 @@ namespace Infraestructure.Migrations
                             CaracteristicaTransporteId = 51,
                             CaracteristicaId = 1,
                             TransporteId = 19,
-                            Valor = "30"
+                            Valor = "85"
                         },
                         new
                         {
@@ -460,7 +460,7 @@ namespace Infraestructure.Migrations
                             CaracteristicaTransporteId = 54,
                             CaracteristicaId = 1,
                             TransporteId = 20,
-                            Valor = "50"
+                            Valor = "80"
                         },
                         new
                         {
@@ -481,7 +481,7 @@ namespace Infraestructure.Migrations
                             CaracteristicaTransporteId = 57,
                             CaracteristicaId = 1,
                             TransporteId = 21,
-                            Valor = "50"
+                            Valor = "75"
                         },
                         new
                         {
@@ -502,7 +502,7 @@ namespace Infraestructure.Migrations
                             CaracteristicaTransporteId = 60,
                             CaracteristicaId = 1,
                             TransporteId = 22,
-                            Valor = "40"
+                            Valor = "85"
                         },
                         new
                         {
@@ -523,7 +523,7 @@ namespace Infraestructure.Migrations
                             CaracteristicaTransporteId = 63,
                             CaracteristicaId = 1,
                             TransporteId = 23,
-                            Valor = "35"
+                            Valor = "80"
                         },
                         new
                         {
@@ -544,7 +544,7 @@ namespace Infraestructure.Migrations
                             CaracteristicaTransporteId = 66,
                             CaracteristicaId = 1,
                             TransporteId = 24,
-                            Valor = "30"
+                            Valor = "75"
                         },
                         new
                         {
@@ -565,7 +565,7 @@ namespace Infraestructure.Migrations
                             CaracteristicaTransporteId = 69,
                             CaracteristicaId = 1,
                             TransporteId = 25,
-                            Valor = "60"
+                            Valor = "85"
                         },
                         new
                         {
@@ -586,7 +586,7 @@ namespace Infraestructure.Migrations
                             CaracteristicaTransporteId = 72,
                             CaracteristicaId = 1,
                             TransporteId = 26,
-                            Valor = "50"
+                            Valor = "80"
                         },
                         new
                         {
@@ -607,7 +607,7 @@ namespace Infraestructure.Migrations
                             CaracteristicaTransporteId = 75,
                             CaracteristicaId = 1,
                             TransporteId = 27,
-                            Valor = "30"
+                            Valor = "75"
                         },
                         new
                         {
@@ -628,7 +628,7 @@ namespace Infraestructure.Migrations
                             CaracteristicaTransporteId = 78,
                             CaracteristicaId = 1,
                             TransporteId = 28,
-                            Valor = "30"
+                            Valor = "85"
                         },
                         new
                         {
@@ -649,7 +649,7 @@ namespace Infraestructure.Migrations
                             CaracteristicaTransporteId = 81,
                             CaracteristicaId = 1,
                             TransporteId = 29,
-                            Valor = "45"
+                            Valor = "80"
                         },
                         new
                         {
@@ -670,7 +670,7 @@ namespace Infraestructure.Migrations
                             CaracteristicaTransporteId = 84,
                             CaracteristicaId = 1,
                             TransporteId = 30,
-                            Valor = "20"
+                            Valor = "75"
                         },
                         new
                         {
@@ -691,7 +691,7 @@ namespace Infraestructure.Migrations
                             CaracteristicaTransporteId = 87,
                             CaracteristicaId = 1,
                             TransporteId = 31,
-                            Valor = "15"
+                            Valor = "85"
                         },
                         new
                         {
@@ -712,7 +712,7 @@ namespace Infraestructure.Migrations
                             CaracteristicaTransporteId = 90,
                             CaracteristicaId = 1,
                             TransporteId = 32,
-                            Valor = "10"
+                            Valor = "80"
                         },
                         new
                         {
@@ -733,7 +733,7 @@ namespace Infraestructure.Migrations
                             CaracteristicaTransporteId = 93,
                             CaracteristicaId = 1,
                             TransporteId = 33,
-                            Valor = "5"
+                            Valor = "75"
                         },
                         new
                         {
@@ -775,7 +775,7 @@ namespace Infraestructure.Migrations
                             CaracteristicaTransporteId = 99,
                             CaracteristicaId = 1,
                             TransporteId = 35,
-                            Valor = "150"
+                            Valor = "220"
                         },
                         new
                         {
@@ -796,7 +796,7 @@ namespace Infraestructure.Migrations
                             CaracteristicaTransporteId = 102,
                             CaracteristicaId = 1,
                             TransporteId = 36,
-                            Valor = "120"
+                            Valor = "240"
                         },
                         new
                         {
@@ -838,7 +838,7 @@ namespace Infraestructure.Migrations
                             CaracteristicaTransporteId = 108,
                             CaracteristicaId = 1,
                             TransporteId = 38,
-                            Valor = "120"
+                            Valor = "220"
                         },
                         new
                         {
@@ -859,7 +859,7 @@ namespace Infraestructure.Migrations
                             CaracteristicaTransporteId = 111,
                             CaracteristicaId = 1,
                             TransporteId = 39,
-                            Valor = "130"
+                            Valor = "240"
                         },
                         new
                         {
@@ -880,7 +880,7 @@ namespace Infraestructure.Migrations
                             CaracteristicaTransporteId = 114,
                             CaracteristicaId = 1,
                             TransporteId = 40,
-                            Valor = "120"
+                            Valor = "200"
                         },
                         new
                         {
@@ -901,7 +901,7 @@ namespace Infraestructure.Migrations
                             CaracteristicaTransporteId = 117,
                             CaracteristicaId = 1,
                             TransporteId = 41,
-                            Valor = "110"
+                            Valor = "220"
                         },
                         new
                         {
@@ -922,7 +922,7 @@ namespace Infraestructure.Migrations
                             CaracteristicaTransporteId = 120,
                             CaracteristicaId = 1,
                             TransporteId = 42,
-                            Valor = "100"
+                            Valor = "240"
                         },
                         new
                         {
@@ -943,7 +943,7 @@ namespace Infraestructure.Migrations
                             CaracteristicaTransporteId = 123,
                             CaracteristicaId = 1,
                             TransporteId = 43,
-                            Valor = "120"
+                            Valor = "200"
                         },
                         new
                         {
@@ -964,7 +964,7 @@ namespace Infraestructure.Migrations
                             CaracteristicaTransporteId = 126,
                             CaracteristicaId = 1,
                             TransporteId = 44,
-                            Valor = "100"
+                            Valor = "220"
                         },
                         new
                         {
@@ -985,7 +985,7 @@ namespace Infraestructure.Migrations
                             CaracteristicaTransporteId = 129,
                             CaracteristicaId = 1,
                             TransporteId = 45,
-                            Valor = "120"
+                            Valor = "240"
                         },
                         new
                         {
@@ -1006,7 +1006,7 @@ namespace Infraestructure.Migrations
                             CaracteristicaTransporteId = 132,
                             CaracteristicaId = 1,
                             TransporteId = 46,
-                            Valor = "80"
+                            Valor = "200"
                         },
                         new
                         {
@@ -1027,7 +1027,7 @@ namespace Infraestructure.Migrations
                             CaracteristicaTransporteId = 135,
                             CaracteristicaId = 1,
                             TransporteId = 47,
-                            Valor = "50"
+                            Valor = "220"
                         },
                         new
                         {
@@ -1048,7 +1048,7 @@ namespace Infraestructure.Migrations
                             CaracteristicaTransporteId = 138,
                             CaracteristicaId = 1,
                             TransporteId = 48,
-                            Valor = "40"
+                            Valor = "240"
                         },
                         new
                         {
