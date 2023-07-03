@@ -1125,8 +1125,8 @@ namespace Infraestructure.Migrations
                         {
                             CompaniaTransporteId = 5,
                             Cuit = "1561232",
-                            ImagenLogo = "https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Despegar.com_logo.svg/1280px-Despegar.com_logo.svg.png",
-                            RazonSocial = "Despegar"
+                            ImagenLogo = "https://flybondi.com/static/media/logo.ebbd0b77.svg",
+                            RazonSocial = "Flybondi"
                         },
                         new
                         {
@@ -1134,6 +1134,13 @@ namespace Infraestructure.Migrations
                             Cuit = "156789456",
                             ImagenLogo = "https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Aerol%C3%ADneas_Argentinas_Logo_2010.svg/512px-Aerol%C3%ADneas_Argentinas_Logo_2010.svg.png",
                             RazonSocial = "Aerolineas Argentinas"
+                        },
+                        new
+                        {
+                            CompaniaTransporteId = 7,
+                            Cuit = "1561482123",
+                            ImagenLogo = "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/Qatar_Airways_Logo.png/800px-Qatar_Airways_Logo.png",
+                            RazonSocial = "Qatar Airways"
                         });
                 });
 
@@ -1222,13 +1229,13 @@ namespace Infraestructure.Migrations
                         new
                         {
                             TransporteId = 5,
-                            CompaniaTransporteId = 5,
+                            CompaniaTransporteId = 6,
                             TipoTransporteId = 1
                         },
                         new
                         {
                             TransporteId = 6,
-                            CompaniaTransporteId = 5,
+                            CompaniaTransporteId = 7,
                             TipoTransporteId = 1
                         },
                         new
@@ -1240,13 +1247,13 @@ namespace Infraestructure.Migrations
                         new
                         {
                             TransporteId = 8,
-                            CompaniaTransporteId = 5,
+                            CompaniaTransporteId = 6,
                             TipoTransporteId = 1
                         },
                         new
                         {
                             TransporteId = 9,
-                            CompaniaTransporteId = 5,
+                            CompaniaTransporteId = 7,
                             TipoTransporteId = 1
                         },
                         new
@@ -1264,13 +1271,13 @@ namespace Infraestructure.Migrations
                         new
                         {
                             TransporteId = 12,
-                            CompaniaTransporteId = 6,
+                            CompaniaTransporteId = 7,
                             TipoTransporteId = 1
                         },
                         new
                         {
                             TransporteId = 13,
-                            CompaniaTransporteId = 6,
+                            CompaniaTransporteId = 5,
                             TipoTransporteId = 1
                         },
                         new
@@ -1282,13 +1289,13 @@ namespace Infraestructure.Migrations
                         new
                         {
                             TransporteId = 15,
-                            CompaniaTransporteId = 6,
+                            CompaniaTransporteId = 7,
                             TipoTransporteId = 1
                         },
                         new
                         {
                             TransporteId = 16,
-                            CompaniaTransporteId = 6,
+                            CompaniaTransporteId = 5,
                             TipoTransporteId = 1
                         },
                         new
@@ -1300,7 +1307,7 @@ namespace Infraestructure.Migrations
                         new
                         {
                             TransporteId = 18,
-                            CompaniaTransporteId = 6,
+                            CompaniaTransporteId = 7,
                             TipoTransporteId = 1
                         },
                         new

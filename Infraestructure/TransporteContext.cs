@@ -31,8 +31,9 @@ namespace Infraestructure
                 new CompaniaTransporte { CompaniaTransporteId = 2, Cuit = "15615612232", RazonSocial = "Chevalier" , ImagenLogo= "https://www.centraldepasajes.com.ar/empresas-de-micro/img/logos/chevallier-logo.png" },
                 new CompaniaTransporte { CompaniaTransporteId = 3, Cuit = "21561665662", RazonSocial = "Sarmiento SRL" , ImagenLogo= "https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Ferrocarriles_Argentinos.svg/1280px-Ferrocarriles_Argentinos.svg.png" },
                 new CompaniaTransporte { CompaniaTransporteId = 4, Cuit = "123456789", RazonSocial = "Roca" , ImagenLogo= "https://yt3.googleusercontent.com/r2dUpnRqDqQ8g-P17-UTpv5LZ7SuJGBNxto_Wp-OCwnJ9q0saSxGs1GQyov8LNftLYNJExTiqw=s900-c-k-c0x00ffffff-no-rj" },
-                new CompaniaTransporte { CompaniaTransporteId = 5, Cuit = "1561232", RazonSocial = "Despegar" , ImagenLogo= "https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Despegar.com_logo.svg/1280px-Despegar.com_logo.svg.png" },
-                new CompaniaTransporte { CompaniaTransporteId = 6, Cuit = "156789456", RazonSocial = "Aerolineas Argentinas" , ImagenLogo= "https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Aerol%C3%ADneas_Argentinas_Logo_2010.svg/512px-Aerol%C3%ADneas_Argentinas_Logo_2010.svg.png" }
+                new CompaniaTransporte { CompaniaTransporteId = 5, Cuit = "1561232", RazonSocial = "Flybondi", ImagenLogo = "https://flybondi.com/static/media/logo.ebbd0b77.svg" },
+                new CompaniaTransporte { CompaniaTransporteId = 6, Cuit = "156789456", RazonSocial = "Aerolineas Argentinas", ImagenLogo = "https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Aerol%C3%ADneas_Argentinas_Logo_2010.svg/512px-Aerol%C3%ADneas_Argentinas_Logo_2010.svg.png" },
+                new CompaniaTransporte { CompaniaTransporteId = 7, Cuit = "1561482123", RazonSocial = "Qatar Airways", ImagenLogo = "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/Qatar_Airways_Logo.png/800px-Qatar_Airways_Logo.png" }
                 );
             modelBuilder.Entity<Transporte>().HasData(
                new Transporte { TransporteId = 1, CompaniaTransporteId = 5, TipoTransporteId = 1 }, // Avion
@@ -40,20 +41,20 @@ namespace Infraestructure
                new Transporte { TransporteId = 3, CompaniaTransporteId = 3, TipoTransporteId = 3 },  // Tren
 
                new Transporte { TransporteId = 4, CompaniaTransporteId = 5, TipoTransporteId = 1 }, // Avion
-               new Transporte { TransporteId = 5, CompaniaTransporteId = 5, TipoTransporteId = 1 }, // Avion
-               new Transporte { TransporteId = 6, CompaniaTransporteId = 5, TipoTransporteId = 1 }, // Avion
+               new Transporte { TransporteId = 5, CompaniaTransporteId = 6, TipoTransporteId = 1 }, // Avion
+               new Transporte { TransporteId = 6, CompaniaTransporteId = 7, TipoTransporteId = 1 }, // Avion
                new Transporte { TransporteId = 7, CompaniaTransporteId = 5, TipoTransporteId = 1 }, // Avion
-               new Transporte { TransporteId = 8, CompaniaTransporteId = 5, TipoTransporteId = 1 }, // Avion
-               new Transporte { TransporteId = 9, CompaniaTransporteId = 5, TipoTransporteId = 1 }, // Avion
+               new Transporte { TransporteId = 8, CompaniaTransporteId = 6, TipoTransporteId = 1 }, // Avion
+               new Transporte { TransporteId = 9, CompaniaTransporteId = 7, TipoTransporteId = 1 }, // Avion
                new Transporte { TransporteId = 10, CompaniaTransporteId = 5, TipoTransporteId = 1 }, // Avion
                new Transporte { TransporteId = 11, CompaniaTransporteId = 6, TipoTransporteId = 1 }, // Avion
-               new Transporte { TransporteId = 12, CompaniaTransporteId = 6, TipoTransporteId = 1 }, // Avion
-               new Transporte { TransporteId = 13, CompaniaTransporteId = 6, TipoTransporteId = 1 }, // Avion
+               new Transporte { TransporteId = 12, CompaniaTransporteId = 7, TipoTransporteId = 1 }, // Avion
+               new Transporte { TransporteId = 13, CompaniaTransporteId = 5, TipoTransporteId = 1 }, // Avion
                new Transporte { TransporteId = 14, CompaniaTransporteId = 6, TipoTransporteId = 1 }, // Avion
-               new Transporte { TransporteId = 15, CompaniaTransporteId = 6, TipoTransporteId = 1 }, // Avion
-               new Transporte { TransporteId = 16, CompaniaTransporteId = 6, TipoTransporteId = 1 }, // Avion
+               new Transporte { TransporteId = 15, CompaniaTransporteId = 7, TipoTransporteId = 1 }, // Avion
+               new Transporte { TransporteId = 16, CompaniaTransporteId = 5, TipoTransporteId = 1 }, // Avion
                new Transporte { TransporteId = 17, CompaniaTransporteId = 6, TipoTransporteId = 1 }, // Avion
-               new Transporte { TransporteId = 18, CompaniaTransporteId = 6, TipoTransporteId = 1 }, // Avion
+               new Transporte { TransporteId = 18, CompaniaTransporteId = 7, TipoTransporteId = 1 }, // Avion
 
                new Transporte { TransporteId = 19, CompaniaTransporteId = 1, TipoTransporteId = 2 }, // Micro
                new Transporte { TransporteId = 20, CompaniaTransporteId = 1, TipoTransporteId = 2 }, // Micro
