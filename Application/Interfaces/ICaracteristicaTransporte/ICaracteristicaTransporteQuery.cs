@@ -11,5 +11,7 @@ namespace Application.Interfaces.ICaracteristicaTransporte
     {
         List<CaracteristicaTransporte> GetAllCaracteristicaTransporte(int? idTransporte = null, int? idCaracteristica = null);
         CaracteristicaTransporte GetCaracteristicaTransporteById(int caracteristicaTransporteId);
+
+        List<CaracteristicaTransporte> GetCaracteristicaTransporte();
     }
 }

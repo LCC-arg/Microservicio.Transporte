@@ -34,6 +34,7 @@ namespace Infraestructure.Command
 
             companiaTransporteOriginal.RazonSocial = companiaRequest.RazonSocial;
             companiaTransporteOriginal.Cuit = companiaRequest.Cuit;
+            companiaTransporteOriginal.ImagenLogo = companiaRequest.Imagen;
             _context.Update(companiaTransporteOriginal);
             _context.SaveChanges();
             return companiaTransporteOriginal;

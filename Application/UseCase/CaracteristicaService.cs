@@ -25,7 +25,7 @@ namespace Application.UseCase
         public CaracteristicaResponse CreateCaracteristica(CaracteristicaRequest caracteristica)
         {
             bool ExisteDescripcion = _query.GetAllCaracteristicas().Any(m => m.Descripcion.ToUpper() == caracteristica.Descripcion.ToUpper());
-            if (ExisteDescripcion) { return null; };
+            if (ExisteDescripcion) { throw new ValorConflictException("La descripcion ingresada ya se encuentra en la base de datos."); };
 
             var caracteristicaOriginal = new Caracteristica
             {
@@ -88,7 +88,7 @@ namespace Application.UseCase
             if (caracteristica == null) { throw new ValorBadRequestException("No existe ninguna caracteristica registrada con ese ID"); }
 
             bool ExisteDescripcion = _query.GetAllCaracteristicas().Any(m => m.Descripcion.ToUpper() == caracteristicaRequest.Descripcion.ToUpper());
-            if (ExisteDescripcion) { return null; };
+            if (ExisteDescripcion) { throw new ValorConflictException("La descripcion ingresada ya se encuentra en la base de datos."); };
 
             var caracteristicas = _command.ActualizeCaracteristica(caracteristicaId, caracteristicaRequest);
 

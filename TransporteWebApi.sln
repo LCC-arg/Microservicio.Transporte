@@ -3,13 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.5.33516.290
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TransporteWebApi", "TransporteWebApi\TransporteWebApi.csproj", "{C760186A-493F-4614-8EBE-3BE54DC24942}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TransporteWebApi", "TransporteWebApi\TransporteWebApi.csproj", "{C760186A-493F-4614-8EBE-3BE54DC24942}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infraestructure", "Infraestructure\Infraestructure.csproj", "{B7F43BBF-2C13-4E9C-A070-59B6D5C2AD82}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Infraestructure", "Infraestructure\Infraestructure.csproj", "{B7F43BBF-2C13-4E9C-A070-59B6D5C2AD82}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain", "Domain\Domain.csproj", "{C9C9B4E6-87BB-4277-BCD8-D377410CCB29}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Domain", "Domain\Domain.csproj", "{C9C9B4E6-87BB-4277-BCD8-D377410CCB29}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Application", "Application\Application.csproj", "{B7A72DB2-C78C-43C6-8370-0C9DE25DAB3B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Application", "Application\Application.csproj", "{B7A72DB2-C78C-43C6-8370-0C9DE25DAB3B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTestTransporteApi", "UnitTestTransporteApi\UnitTestTransporteApi.csproj", "{3E7E0328-058A-43A3-B1CC-2DE6F57D62A2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{B7A72DB2-C78C-43C6-8370-0C9DE25DAB3B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B7A72DB2-C78C-43C6-8370-0C9DE25DAB3B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B7A72DB2-C78C-43C6-8370-0C9DE25DAB3B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3E7E0328-058A-43A3-B1CC-2DE6F57D62A2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3E7E0328-058A-43A3-B1CC-2DE6F57D62A2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3E7E0328-058A-43A3-B1CC-2DE6F57D62A2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3E7E0328-058A-43A3-B1CC-2DE6F57D62A2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

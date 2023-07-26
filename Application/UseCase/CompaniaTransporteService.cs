@@ -69,7 +69,9 @@ namespace Application.UseCase
             {
                 Id = compania.CompaniaTransporteId,
                 Cuit = compania.Cuit,
-                RazonSocial = compania.RazonSocial
+                RazonSocial = compania.RazonSocial,
+                Imagen = compania.ImagenLogo
+               
             };
         }
 
@@ -83,7 +85,8 @@ namespace Application.UseCase
             {
                 Id = compania.CompaniaTransporteId,
                 Cuit = compania.Cuit,
-                RazonSocial = compania.RazonSocial
+                RazonSocial = compania.RazonSocial,
+                Imagen = compania.ImagenLogo
             };
         }
 
@@ -103,7 +106,8 @@ namespace Application.UseCase
             {
                 Id = compania.CompaniaTransporteId,
                 Cuit = compania.Cuit,
-                RazonSocial = compania.RazonSocial
+                RazonSocial = compania.RazonSocial,
+                Imagen = compania.ImagenLogo
             };
         }
     }

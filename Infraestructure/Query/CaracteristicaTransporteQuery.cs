@@ -1,6 +1,7 @@
 ﻿using Application.Interfaces.ICaracteristicaTransporte;
 using Domain;
 using Microsoft.EntityFrameworkCore;
+using static Microsoft.EntityFrameworkCore.DbLoggerCategory;
 
 namespace Infraestructure.Query
 {
@@ -36,6 +37,15 @@ namespace Infraestructure.Query
         {
             var caracteristicaTransporte = _context.CaracteristicaTransporte.FirstOrDefault(Ct => Ct.CaracteristicaTransporteId == caracteristicaTransporteId);
             return caracteristicaTransporte;
+        }
+
+        public List<CaracteristicaTransporte> GetCaracteristicaTransporte()
+        {
+            var ListaCaracteristicaTransporte = _context.CaracteristicaTransporte
+                .Include(c => c.Caracteristica)
+                .Include(c => c.Transporte)
+                .OrderBy(c => c.CaracteristicaTransporteId).ToList();
+            return ListaCaracteristicaTransporte;
         }
     }
 }

@@ -95,7 +95,7 @@ namespace Application.UseCase
 
         public CaracteristicaTransporteResponse RemoveCaracteristicaTransporte(int caracteristicaTransporteId)
         {
-            bool ValidarCT = _query.GetAllCaracteristicaTransporte().Any(c => c.CaracteristicaTransporteId == caracteristicaTransporteId);
+            bool ValidarCT = _query.GetCaracteristicaTransporte().Any(c => c.CaracteristicaTransporteId == caracteristicaTransporteId);
             if (!ValidarCT) { throw new ValorBadRequestException("La CaracteristicaTransporte con ID " + caracteristicaTransporteId + " no existe en la base de datos."); }
 
             var caracteristicaTransporte = _command.DeleteCaracteristicaTransporte(caracteristicaTransporteId);
@@ -111,13 +111,13 @@ namespace Application.UseCase
 
         public CaracteristicaTransporteResponse UpdateCaracteristicaTransporte(int caracteristicaTransporteId, CaracteristicaTransporteRequest caracteristicaTransporteRequest)
         {
-            bool ValidarCT = _query.GetAllCaracteristicaTransporte().Any(c => c.CaracteristicaTransporteId == caracteristicaTransporteId);
+            bool ValidarCT = _query.GetCaracteristicaTransporte().Any(c => c.CaracteristicaTransporteId == caracteristicaTransporteId);
             if (!ValidarCT) { throw new ValorBadRequestException("La CaracteristicaTransporte con ID " + caracteristicaTransporteId + " no existe en la base de datos."); }
 
-            bool ValidarC = _query.GetAllCaracteristicaTransporte().Any(c => c.CaracteristicaId == caracteristicaTransporteRequest.CaracteristicaId);
+            bool ValidarC = _caracteristicaQuery.GetAllCaracteristicas().Any(c => c.CaracteristicaId == caracteristicaTransporteRequest.CaracteristicaId);
             if (!ValidarC) { throw new ValorBadRequestException("No existe Caracteristica con ese ID en la base de datos"); }
 
-            bool ValidarT = _query.GetAllCaracteristicaTransporte().Any(c => c.TransporteId == caracteristicaTransporteRequest.TransporteId);
+            bool ValidarT = _transporteQuery.GetAllTransporte().Any(c => c.TransporteId == caracteristicaTransporteRequest.TransporteId);
             if (!ValidarT) { throw new ValorBadRequestException("No existe Transporte con ese ID en la base de datos"); }
 
             var caracteristicaTransporte = _command.ActualizeCaracteristicaTransporte(caracteristicaTransporteId, caracteristicaTransporteRequest);

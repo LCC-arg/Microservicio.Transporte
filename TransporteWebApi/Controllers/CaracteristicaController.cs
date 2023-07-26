@@ -3,6 +3,7 @@ using Application.Interfaces.ICaracteristica;
 using Application.Request;
 using Application.Responses;
 using Microsoft.AspNetCore.Mvc;
+using System.Drawing;
 
 namespace TransporteWebApi.Controllers
 {
@@ -49,13 +50,15 @@ namespace TransporteWebApi.Controllers
         [ProducesResponseType(typeof(BadRequest), 409)]
         public IActionResult CreateCaracteristica (CaracteristicaRequest caracteristicaRequest)
         {
-            var result = _caracteristicaService.CreateCaracteristica(caracteristicaRequest);
-            if (result == null)
+            try
             {
-                return Conflict(new { message = "La descripcion ingresada ya se encuentra en la base de datos" });
+                var result = _caracteristicaService.CreateCaracteristica(caracteristicaRequest);
+                return new JsonResult(result) { StatusCode = 201 };
             }
-
-            return new JsonResult(result) { StatusCode = 201 };
+            catch (ValorConflictException valor)
+            {
+                return Conflict(new { valor.Message });
+            }
         }
 
 
@@ -68,13 +71,12 @@ namespace TransporteWebApi.Controllers
         {
             try
             {
-                var result = _caracteristicaService.UpdateCaracteristica(id,caracteristicaRequest);
-                if(result == null)
-                {
-                    return Conflict(new { message = "La descripcion ingresada ya se encuentra en la base de datos" });
-                }
-
-                return new JsonResult(result);
+                var result = _caracteristicaService.CreateCaracteristica(caracteristicaRequest);
+                return new JsonResult(result) { StatusCode = 201 };
+            }
+            catch (ValorConflictException valor)
+            {
+                return Conflict(new { valor.Message });
             }
             catch (ValorBadRequestException valor)
             {
