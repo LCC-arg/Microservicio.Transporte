@@ -23,7 +23,7 @@ namespace UnitTestTransporteApi.TipoTransporteTest
         public void RemoveTipoTransporte_ShouldReturnCorrectResponse()
         {
             //Arrange
-            var tipoTransporte = new TipoTransporte{ TipoTransporteId = 1, Descripcion = "Descripcion Test" };
+            var tipoTransporte = new TipoTransporte{ TipoTransporteId = 1, Descripcion = "Tipo Transporte Descripcion Test" };
 
             var listaTipoTransporteExistentes = new List<TipoTransporte> { tipoTransporte };
 
@@ -45,8 +45,8 @@ namespace UnitTestTransporteApi.TipoTransporteTest
         public void RemoveTipoTransporte_ShouldThrowExceptionifTipoisNull()
         {
             //Arrange
-            var listaCompaniasExistentes = new List<TipoTransporte>();
-            mockTipoTransporteQuery.Setup(q => q.GetAllTipoTransporte()).Returns(listaCompaniasExistentes);
+            var listaTipoTransporteExistentes = new List<TipoTransporte>();
+            mockTipoTransporteQuery.Setup(q => q.GetAllTipoTransporte()).Returns(listaTipoTransporteExistentes);
 
             var service = new TipoTransporteService(mockTipoTransporteCommand.Object, mockTipoTransporteQuery.Object);
 

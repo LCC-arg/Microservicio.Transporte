@@ -26,11 +26,11 @@ namespace TransporteWebApi.Controllers
             try
             {
                 var result = _caracteristicaService.GetCaracteristicabyId(id);
-                return new JsonResult(result);
+                return new JsonResult(result) { StatusCode = 200};
             }
             catch (ValorBadRequestException valor)
             {
-                return NotFound(new { valor.Message });
+                return NotFound(new BadRequest { Message = valor.Message });
             }
 
         }
@@ -41,7 +41,7 @@ namespace TransporteWebApi.Controllers
         public IActionResult GetAll()
         {
             var result = _caracteristicaService.GetAllCaracteristica();
-            return new JsonResult(result);
+            return new JsonResult(result) { StatusCode = 200 };
         }
 
 
@@ -57,7 +57,7 @@ namespace TransporteWebApi.Controllers
             }
             catch (ValorConflictException valor)
             {
-                return Conflict(new { valor.Message });
+                return Conflict(new BadRequest { Message = valor.Message });
             }
         }
 
@@ -71,16 +71,16 @@ namespace TransporteWebApi.Controllers
         {
             try
             {
-                var result = _caracteristicaService.CreateCaracteristica(caracteristicaRequest);
-                return new JsonResult(result) { StatusCode = 201 };
+                var result = _caracteristicaService.UpdateCaracteristica(id,caracteristicaRequest);
+                return new JsonResult(result) { StatusCode = 200 };
             }
             catch (ValorConflictException valor)
             {
-                return Conflict(new { valor.Message });
+                return Conflict(new BadRequest { Message = valor.Message });
             }
             catch (ValorBadRequestException valor)
             {
-                return NotFound(new { valor.Message });
+                return NotFound(new BadRequest { Message = valor.Message });
             }
         }
 
@@ -94,11 +94,11 @@ namespace TransporteWebApi.Controllers
             try
             {
                 var result = _caracteristicaService.RemoveCaracteristica(id);
-                return new JsonResult(result);
+                return new JsonResult(result) { StatusCode = 200 };
             }
             catch (ValorBadRequestException valor)
             {
-                return NotFound(new { valor.Message });
+                return NotFound(new BadRequest { Message = valor.Message });
             }
         }
     }

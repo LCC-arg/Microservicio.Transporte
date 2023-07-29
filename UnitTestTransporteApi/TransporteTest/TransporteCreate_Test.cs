@@ -34,7 +34,7 @@ namespace UnitTestTransporteApi.TransporteTest
             var compania = new CompaniaTransporte { CompaniaTransporteId = 1, Cuit = "Test cuit", RazonSocial = "Test Razon Social", ImagenLogo = "Test Imagen"};
             var listaCompaniasExistentes = new List<CompaniaTransporte> { compania };
 
-            var tipoTransporte = new TipoTransporte { TipoTransporteId = 1, Descripcion = "Descripcion Test" };
+            var tipoTransporte = new TipoTransporte { TipoTransporteId = 1, Descripcion = "Tipo Transporte Descripcion Test" };
             var listaTipoTransporteExistentes = new List<TipoTransporte> { tipoTransporte };
 
             mockTipoTransporteQuery.Setup(q => q.GetAllTipoTransporte()).Returns(listaTipoTransporteExistentes);
@@ -77,7 +77,7 @@ namespace UnitTestTransporteApi.TransporteTest
             var transporteRequest = new TransporteRequest { CompaniaTransporteId = 1, TipoTransporteId = 1 };
             var listaCompaniasExistentes = new List<CompaniaTransporte>();
 
-            var tipoTransporte = new TipoTransporte { TipoTransporteId = 1, Descripcion = "Descripcion Test" };
+            var tipoTransporte = new TipoTransporte { TipoTransporteId = 1, Descripcion = "Tipo Transporte Descripcion Test" };
             var listaTipoTransporteExistentes = new List<TipoTransporte> { tipoTransporte };
 
             mockTipoTransporteQuery.Setup(q => q.GetAllTipoTransporte()).Returns(listaTipoTransporteExistentes);

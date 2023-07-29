@@ -29,7 +29,7 @@ namespace TransporteWebApi.Controllers
             }
             catch(ValorConflictException valor)
             {
-                return Conflict(new { valor.Message });
+                return Conflict(new BadRequest { Message = valor.Message });
             }
         }
 
@@ -41,11 +41,11 @@ namespace TransporteWebApi.Controllers
             try
             {
                 var result = _companiaTransporteService.GetCompaniaTransportebyId(id);
-                return new JsonResult(result);
+                return new JsonResult(result) { StatusCode = 200 };
             }
             catch (ValorBadRequestException valor)
             {
-                return NotFound(new { valor.Message });
+                return NotFound(new BadRequest { Message = valor.Message });
             }
         }
 
@@ -54,7 +54,7 @@ namespace TransporteWebApi.Controllers
         public IActionResult GetAllCompaniaTransporte()
         {
             var result = _companiaTransporteService.GetAllCompaniaTransporte();
-            return new JsonResult(result);
+            return new JsonResult(result) { StatusCode = 200 };
         }
 
         [HttpDelete("{id}")]
@@ -65,11 +65,11 @@ namespace TransporteWebApi.Controllers
             try
             {
                 var result = _companiaTransporteService.RemoveCompaniaTransporte(id);
-                return new JsonResult(result);
+                return new JsonResult(result) { StatusCode = 200 };
             }
             catch (ValorBadRequestException valor)
             {
-                return NotFound(new { valor.Message });
+                return NotFound(new BadRequest { Message = valor.Message });
             }
         }
 
@@ -82,15 +82,15 @@ namespace TransporteWebApi.Controllers
             try
             {
                 var result = _companiaTransporteService.UpdateCompaniaTransporte(id, companiaRequest);
-                return new JsonResult(result);
+                return new JsonResult(result) { StatusCode = 200 };
             }
             catch (ValorBadRequestException valor)
             {
-                return NotFound(new { valor.Message });
+                return NotFound( new BadRequest { Message = valor.Message } );
             }
             catch (ValorConflictException valor)
             {
-                return Conflict(new { valor.Message });
+                return Conflict(new BadRequest { Message = valor.Message }); 
             }
         }
     }

@@ -29,7 +29,7 @@ namespace UnitTestTransporteApi.CaracteristicaTest
         {
             //Arrange
             var caracteristica = new Caracteristica { CaracteristicaId = 1, Descripcion = "Descripcion Test" };
-            var caracteristicaRequest = new CaracteristicaRequest { Descripcion = "TEST" };
+            var caracteristicaRequest = new CaracteristicaRequest { Descripcion = "Marca" };
 
             var listaCaracteristicaExistentes = new List<Caracteristica> { caracteristica };
 
@@ -57,7 +57,8 @@ namespace UnitTestTransporteApi.CaracteristicaTest
         [Fact]
         public void CaracteristicaUpdate_ShouldThrowExceptionIfCaracteristicaIsNull()
         {
-            var caracteristicaRequest = new CaracteristicaRequest { Descripcion = "TEST" };
+            //Arrange
+            var caracteristicaRequest = new CaracteristicaRequest { Descripcion = "Marca" };
 
             var service = new CaracteristicaService(mockCaracteristicaCommand.Object, mockCaracteristicaQuery.Object);
 
@@ -69,21 +70,13 @@ namespace UnitTestTransporteApi.CaracteristicaTest
         public void CaracteristicaUpdate_ShouldThrowExceptionIfDescripcionExists()
         {
             //Arrange
-            var caracteristica = new Caracteristica { CaracteristicaId = 1, Descripcion = "Descripcion Test" };
-            var caracteristicaRequest = new CaracteristicaRequest { Descripcion = "Descripcion Test" };
+            var caracteristica = new Caracteristica { CaracteristicaId = 1, Descripcion = "Marca" };
+            var caracteristicaRequest = new CaracteristicaRequest { Descripcion = "Marca" };
 
             var listaCaracteristicaExistentes = new List<Caracteristica> { caracteristica };
 
             mockCaracteristicaQuery.Setup(q => q.GetCaracteristicasById(It.IsAny<int>())).Returns(caracteristica);
             mockCaracteristicaQuery.Setup(q => q.GetAllCaracteristicas()).Returns(listaCaracteristicaExistentes);
-            mockCaracteristicaCommand.Setup(q => q.ActualizeCaracteristica(It.IsAny<int>(), It.IsAny<CaracteristicaRequest>()))
-            .Returns((int id, CaracteristicaRequest request) =>
-            {
-                caracteristica.CaracteristicaId = id;
-                caracteristica.Descripcion = request.Descripcion;
-
-                return caracteristica;
-            });
 
             var service = new CaracteristicaService(mockCaracteristicaCommand.Object, mockCaracteristicaQuery.Object);
 

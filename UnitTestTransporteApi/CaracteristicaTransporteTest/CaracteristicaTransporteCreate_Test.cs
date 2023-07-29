@@ -29,10 +29,10 @@ namespace UnitTestTransporteApi.CaracteristicaTransporteTest
         public void CaracteristicaTransporteCreate_ShouldReturnCorrectResponse()
         {
             //Arrange
-            var compania = new CompaniaTransporte { CompaniaTransporteId = 1, Cuit = "Test cuit", RazonSocial = "Test Razon Social", ImagenLogo = "Test Imagen" };
-            var tipoTransporte = new TipoTransporte { TipoTransporteId = 1, Descripcion = "Descripcion Test" };
+            var compania = new CompaniaTransporte { CompaniaTransporteId = 1, Cuit = "1234", RazonSocial = "RazonSocial S.A", ImagenLogo = "Test Imagen" };
+            var tipoTransporte = new TipoTransporte { TipoTransporteId = 1, Descripcion = "Auto" };
             var transporte = new Transporte { TransporteId = 1, TipoTransporte = tipoTransporte, TipoTransporteId = 1, CompaniaTransporte = compania, CompaniaTransporteId = 1 };
-            var caracteristica = new Caracteristica { CaracteristicaId = 1, Descripcion = "Descripcion Test" };
+            var caracteristica = new Caracteristica { CaracteristicaId = 1, Descripcion = "Marca" };
             var listaTransporteExistentes = new List<Transporte> { transporte };
             var listaCaracteristicaExistentes = new List<Caracteristica> { caracteristica };
 
@@ -43,8 +43,10 @@ namespace UnitTestTransporteApi.CaracteristicaTransporteTest
 
             var service = new CaracteristicaTransporteService(mockCaracteristicaTransporteCommand.Object, mockCaracteristicaTransporteQuery.Object, mockCaracteristicaQuery.Object, mockTransporteQuery.Object);
 
+            //Act
             var result = service.CreateCaracteristicaTransporte(caracteristicaTransporteRequest);
 
+            //Assert
             result.TransporteId.Should().Be(caracteristicaTransporteRequest.TransporteId);
             result.CaracteristicaId.Should().Be(caracteristicaTransporteRequest.CaracteristicaId);
             result.valor.Should().Be(caracteristicaTransporteRequest.Valor);
@@ -69,7 +71,7 @@ namespace UnitTestTransporteApi.CaracteristicaTransporteTest
         public void CaracteristicaTransporteCreate_ShouldThrowExceptionifTransporteIsNull()
         {
             //Arrange
-            var caracteristica = new Caracteristica { CaracteristicaId = 1, Descripcion = "Descripcion Test" };
+            var caracteristica = new Caracteristica { CaracteristicaId = 1, Descripcion = "Marca" };
             var listaTransporteExistentes = new List<Transporte>();
             var listaCaracteristicaExistentes = new List<Caracteristica> { caracteristica };
 

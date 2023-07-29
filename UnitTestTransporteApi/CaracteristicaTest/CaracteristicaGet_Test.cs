@@ -5,11 +5,6 @@ using Application.UseCase;
 using Domain;
 using FluentAssertions;
 using Moq;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace UnitTestTransporteApi.CaracteristicaTest
 {
@@ -27,7 +22,7 @@ namespace UnitTestTransporteApi.CaracteristicaTest
         [Fact]
         public void GetCaracteristicaById_ShouldReturnCorrectResponse()
         {
-            var caracteristica = new Caracteristica { CaracteristicaId = 1, Descripcion = "Descripcion Test" };
+            var caracteristica = new Caracteristica { CaracteristicaId = 1, Descripcion = "Marca" };
 
             mockCaracteristicaQuery.Setup(q => q.GetCaracteristicasById(It.IsAny<int>())).Returns(caracteristica);
 
@@ -55,8 +50,8 @@ namespace UnitTestTransporteApi.CaracteristicaTest
             List<CaracteristicaResponse> listaCaracteristicaResponses = new List<CaracteristicaResponse>();
             var listaCaracteristicaExistentes = new List<Caracteristica>()
             {
-                new Caracteristica { CaracteristicaId = 1, Descripcion = "Descripcion Test" },
-                new Caracteristica {CaracteristicaId = 2, Descripcion = "Descripcion Test 2"}
+                new Caracteristica { CaracteristicaId = 1, Descripcion = "Marca" },
+                new Caracteristica {CaracteristicaId = 2, Descripcion = "Tamaño de neumatico"}
             };
 
             foreach (var c in listaCaracteristicaExistentes)

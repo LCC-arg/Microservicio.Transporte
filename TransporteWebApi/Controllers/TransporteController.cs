@@ -32,7 +32,7 @@ namespace TransporteWebApi.Controllers
             }
             catch (ValorBadRequestException valor)
             {
-                return NotFound(new { valor.Message });
+                return NotFound(new BadRequest { Message = valor.Message });
             }
 
         }
@@ -45,11 +45,11 @@ namespace TransporteWebApi.Controllers
             try
             {
                 var result = _transporteService.GetTransportebyId(id);
-                return new JsonResult(result);
+                return new JsonResult(result) { StatusCode = 200};
             }
             catch (ValorBadRequestException valor)
             {
-                return NotFound(new { valor.Message });
+                return NotFound(new BadRequest { Message = valor.Message });
             }
         }
 
@@ -58,7 +58,7 @@ namespace TransporteWebApi.Controllers
         public IActionResult GetAllTransporte()
         {
             var result = _transporteService.GetAllTransporte();
-            return new JsonResult(result);
+            return new JsonResult(result) { StatusCode = 200 };
         }
 
         [HttpDelete("{id}")]
@@ -69,11 +69,11 @@ namespace TransporteWebApi.Controllers
             try
             {
                 var result = _transporteService.RemoveTransporte(id);
-                return new JsonResult(result);
+                return new JsonResult(result) { StatusCode = 200 };
             }
             catch (ValorBadRequestException valor)
             {
-                return NotFound(new { valor.Message });
+                return NotFound(new BadRequest { Message = valor.Message });
             }
         }
         [HttpPut("{id}")]
@@ -84,11 +84,11 @@ namespace TransporteWebApi.Controllers
             try
             {
                 var result = _transporteService.UpdateTransporte(id,transporteRequest);
-                return new JsonResult(result);
+                return new JsonResult(result) { StatusCode = 200 };
             }
             catch (ValorBadRequestException valor)
             {
-                return NotFound(new { valor.Message });
+                return NotFound(new BadRequest { Message = valor.Message });
             }
         }
     }

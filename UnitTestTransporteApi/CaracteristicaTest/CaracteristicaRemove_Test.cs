@@ -22,7 +22,7 @@ namespace UnitTestTransporteApi.CaracteristicaTest
         public void CaracteristicaRemove_ShouldReturnCorrectResponse()
         {
             //Arrange
-            var caracteristica = new Caracteristica { CaracteristicaId = 1, Descripcion = "Descripcion Test" };
+            var caracteristica = new Caracteristica { CaracteristicaId = 1, Descripcion = "Marca" };
             var listaCaracteristicasExistentes = new List<Caracteristica>() { caracteristica };
 
             mockCaracteristicaCommand.Setup(q => q.DeleteCaracteristica(It.IsAny<int>())).Returns(caracteristica);

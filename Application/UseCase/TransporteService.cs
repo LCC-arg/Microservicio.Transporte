@@ -132,7 +132,7 @@ namespace Application.UseCase
             {
                 Id = transporte.TransporteId,
                 CompaniaTransporteId = transporte.CompaniaTransporteId,
-                TipoTransporteId = transporte.TransporteId
+                TipoTransporteId = transporte.TipoTransporteId
             };
         }
     }

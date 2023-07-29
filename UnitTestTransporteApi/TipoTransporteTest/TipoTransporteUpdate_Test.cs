@@ -24,9 +24,9 @@ namespace UnitTestTransporteApi.TipoTransporteTest
         public void UpdateTipoTransporte_ShouldReturnCorrectResponse()
         {
             //Arrange
-            var tipoTransporte = new TipoTransporte { TipoTransporteId = 1, Descripcion = "Descripcion Test" };
+            var tipoTransporte = new TipoTransporte { TipoTransporteId = 1, Descripcion = "Tipo Transporte Descripcion Test" };
 
-            var tipoTransporteRequest = new TipoTransporteRequest { Descripcion = "TEST Descripcion" };
+            var tipoTransporteRequest = new TipoTransporteRequest { Descripcion = "Request Test Descripcion" };
 
             var listaTipoTransporteExistentes = new List<TipoTransporte> { tipoTransporte };
 
@@ -55,7 +55,7 @@ namespace UnitTestTransporteApi.TipoTransporteTest
         public void UpdateTipoTransporte_ShouldShouldThrowExceptionifTipoisNull()
         {
             //Arrange
-            var tipoTransporteRequest = new TipoTransporteRequest { Descripcion = "TEST Descripcion" };
+            var tipoTransporteRequest = new TipoTransporteRequest { Descripcion = "Request Test Descripcion" };
             var listaTipoTransporteExistentes = new List<TipoTransporte>();
             mockTipoTransporteQuery.Setup(q => q.GetAllTipoTransporte()).Returns(listaTipoTransporteExistentes);
 
@@ -73,14 +73,14 @@ namespace UnitTestTransporteApi.TipoTransporteTest
                 new TipoTransporte
                 {
                     TipoTransporteId = 1,
-                    Descripcion = "Descripcion Test"
+                    Descripcion = "Tipo Transporte Descripcion Test"
                 }
             };
             mockTipoTransporteQuery.Setup(q => q.GetAllTipoTransporte()).Returns(listaTipoTransporteExistentes);
 
             var service = new TipoTransporteService(mockTipoTransporteCommand.Object, mockTipoTransporteQuery.Object);
 
-            var tipoTransporteRequest = new TipoTransporteRequest { Descripcion = "Descripcion Test" };
+            var tipoTransporteRequest = new TipoTransporteRequest { Descripcion = "Tipo Transporte Descripcion Test" };
 
             // Act & Assert
             Assert.Throws<ValorConflictException>(() => service.UpdateTipoTransporte(1, tipoTransporteRequest));

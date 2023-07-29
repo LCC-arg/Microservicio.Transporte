@@ -5,11 +5,6 @@ using Application.UseCase;
 using Domain;
 using FluentAssertions;
 using Moq;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace UnitTestTransporteApi.CaracteristicaTest
 {
@@ -29,7 +24,7 @@ namespace UnitTestTransporteApi.CaracteristicaTest
         {
             //Arrange
             mockCaracteristicaQuery.Setup(q => q.GetAllCaracteristicas()).Returns(new List<Caracteristica>());
-            var caracteristicaRequest = new CaracteristicaRequest { Descripcion = "Caracteristica Test" };
+            var caracteristicaRequest = new CaracteristicaRequest { Descripcion = "Marca" };
 
             var service = new CaracteristicaService(mockCaracteristicaCommand.Object, mockCaracteristicaQuery.Object);
 
@@ -45,14 +40,14 @@ namespace UnitTestTransporteApi.CaracteristicaTest
         {
             var listaCaracteristica = new List<Caracteristica>
             {
-                new Caracteristica { CaracteristicaId = 1, Descripcion = "Caracteristica Test"}
+                new Caracteristica { CaracteristicaId = 1, Descripcion = "Marca"}
             };
 
             mockCaracteristicaQuery.Setup(q => q.GetAllCaracteristicas()).Returns(listaCaracteristica);
 
             var service = new CaracteristicaService(mockCaracteristicaCommand.Object, mockCaracteristicaQuery.Object);
 
-            var caracteristicaRequest = new CaracteristicaRequest { Descripcion = "Caracteristica Test" };
+            var caracteristicaRequest = new CaracteristicaRequest { Descripcion = "Marca" };
 
             // Act & Assert
             Assert.Throws<ValorConflictException>(() => service.CreateCaracteristica(caracteristicaRequest));

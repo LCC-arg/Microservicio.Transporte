@@ -24,7 +24,7 @@ namespace UnitTestTransporteApi.TipoTransporteTest
         public void GetTipoTransporteById_ShouldReturnCorrectResponse()
         {
             //Arrange
-            var tipoTransporte = new TipoTransporte { TipoTransporteId = 1, Descripcion = "Descripcion Test" };
+            var tipoTransporte = new TipoTransporte { TipoTransporteId = 1, Descripcion = "Tipo Transporte Descripcion Test" };
 
             mockTipoTransporteQuery.Setup(q => q.GetTipoTransporteById(It.IsAny<int>())).Returns(tipoTransporte);
 
@@ -55,7 +55,7 @@ namespace UnitTestTransporteApi.TipoTransporteTest
             List<TipoTransporteResponse> listaTipoTransporteResponse = new List<TipoTransporteResponse>();
             var listaTipoTransporteExistentes = new List<TipoTransporte>
             {
-                new TipoTransporte { TipoTransporteId = 1, Descripcion = "Descripcion Test" }
+                new TipoTransporte { TipoTransporteId = 1, Descripcion = "Tipo Transporte Descripcion Test" }
             };
 
             foreach (var tipo in listaTipoTransporteExistentes)

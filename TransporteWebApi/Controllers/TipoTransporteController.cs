@@ -29,7 +29,7 @@ namespace TransporteWebApi.Controllers
             }
             catch (ValorConflictException valor)
             {
-                return Conflict(new { valor.Message });
+                return Conflict(new BadRequest { Message = valor.Message });
             }
         }
 
@@ -41,11 +41,11 @@ namespace TransporteWebApi.Controllers
             try
             {
                 var result = _tipoTransporteService.GetTipoTransportebyId(id);
-                return new JsonResult(result);
+                return new JsonResult(result) { StatusCode = 200 };
             }
             catch (ValorBadRequestException valor)
             {
-                return NotFound(new { valor.Message });
+                return NotFound(new BadRequest { Message = valor.Message });
             }
         }
 
@@ -54,7 +54,7 @@ namespace TransporteWebApi.Controllers
         public IActionResult GetAllTipoTransporte()
         {
             var result = _tipoTransporteService.GetAllTipoTransporte();
-            return new JsonResult(result);
+            return new JsonResult(result) { StatusCode = 200 };
         }
 
         [HttpDelete("{id}")]
@@ -65,11 +65,11 @@ namespace TransporteWebApi.Controllers
             try
             {
                 var result = _tipoTransporteService.RemoveTipoTransporte(id);
-                return new JsonResult(result);
+                return new JsonResult(result) { StatusCode = 200 };
             }
             catch (ValorBadRequestException valor)
             {
-                return NotFound(new { valor.Message });
+                return NotFound(new BadRequest { Message = valor.Message });
             }
         }
 
@@ -77,20 +77,20 @@ namespace TransporteWebApi.Controllers
         [ProducesResponseType(typeof(TipoTransporteResponse), 200)]
         [ProducesResponseType(typeof(BadRequest), 404)]
         [ProducesResponseType(typeof(BadRequest), 409)]
-        public IActionResult UpdateCompaniaTransporte(int id, TipoTransporteRequest tipoTransporteRequest)
+        public IActionResult UpdateTipoTransporte(int id, TipoTransporteRequest tipoTransporteRequest)
         {
             try
             {
                 var result = _tipoTransporteService.UpdateTipoTransporte(id, tipoTransporteRequest);
-                return new JsonResult(result);
+                return new JsonResult(result) { StatusCode = 200 };
             }
             catch (ValorBadRequestException valor)
             {
-                return NotFound(new { valor.Message });
+                return NotFound(new BadRequest { Message = valor.Message });
             }
             catch (ValorConflictException valor)
             {
-                return Conflict(new { valor.Message });
+                return Conflict(new BadRequest { Message = valor.Message });
             }
         }
     }

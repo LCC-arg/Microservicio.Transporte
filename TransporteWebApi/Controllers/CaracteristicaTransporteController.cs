@@ -22,20 +22,16 @@ namespace TransporteWebApi.Controllers
         [ProducesResponseType(typeof(CaracteristicaTransporteResponse), 201)]
         [ProducesResponseType(typeof(BadRequest), 404)]
         [ProducesResponseType(typeof(BadRequest), 409)]
-        public IActionResult CreateCompaniaTransporte(CaracteristicaTransporteRequest caracteristicaTransporteRequest)
+        public IActionResult CreateCaracteristicaTransporte(CaracteristicaTransporteRequest caracteristicaTransporteRequest)
         {
             try
             {
                 var result = _caracteristicaTransporteService.CreateCaracteristicaTransporte(caracteristicaTransporteRequest);
                 return new JsonResult(result) { StatusCode = 201 };
             }
-            catch (ValorConflictException valor)
-            {
-                return Conflict(new { valor.Message });
-            }
             catch (ValorBadRequestException valor)
             {
-                return NotFound(new { valor.Message });
+                return NotFound(new BadRequest { Message = valor.Message });
             }
         }
 
@@ -47,11 +43,11 @@ namespace TransporteWebApi.Controllers
             try
             {
                 var result = _caracteristicaTransporteService.GetCaracteristicaTransportebyId(id);
-                return new JsonResult(result);
+                return new JsonResult(result) { StatusCode = 200 };
             }
             catch (ValorBadRequestException valor)
             {
-                return NotFound(new { valor.Message });
+                return NotFound(new BadRequest { Message = valor.Message });
             }
         }
 
@@ -60,7 +56,7 @@ namespace TransporteWebApi.Controllers
         public IActionResult GetAllCaracteristicaTransporte([FromQuery] int? idTransporte = null, int? idCaracteristica = null)
         {
             var result = _caracteristicaTransporteService.GetAllCaracteristicaTransporte(idTransporte, idCaracteristica);
-            return new JsonResult(result);
+            return new JsonResult(result) { StatusCode = 200};
         }
 
         [HttpDelete("{id}")]
@@ -71,11 +67,11 @@ namespace TransporteWebApi.Controllers
             try
             {
                 var result = _caracteristicaTransporteService.RemoveCaracteristicaTransporte(id);
-                return new JsonResult(result);
+                return new JsonResult(result) { StatusCode = 200 };
             }
             catch (ValorBadRequestException valor)
             {
-                return NotFound(new { valor.Message });
+                return NotFound(new BadRequest { Message = valor.Message });
             }
         }
 
@@ -87,11 +83,11 @@ namespace TransporteWebApi.Controllers
             try
             {
                 var result = _caracteristicaTransporteService.UpdateCaracteristicaTransporte(id, caracteristicaTransporteRequest);
-                return new JsonResult(result);
+                return new JsonResult(result) { StatusCode = 200 };
             }
             catch (ValorBadRequestException valor)
             {
-                return NotFound(new { valor.Message });
+                return NotFound(new BadRequest { Message = valor.Message });
             }
         }
     }

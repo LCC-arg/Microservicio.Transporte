@@ -30,12 +30,14 @@ namespace UnitTestTransporteApi.TransporteTest
         {
             //Arrange
             var compania = new CompaniaTransporte { CompaniaTransporteId = 1, Cuit = "Test cuit", RazonSocial = "Test Razon Social", ImagenLogo = "Test Imagen" };
-            var listaCompaniasExistentes = new List<CompaniaTransporte> { compania };
+            var compania2 = new CompaniaTransporte { CompaniaTransporteId = 2, Cuit = "Test cuit2", RazonSocial = "Test Razon Social2", ImagenLogo = "Test Imagen2" };
+            var listaCompaniasExistentes = new List<CompaniaTransporte> { compania, compania2 };
 
-            var tipoTransporte = new TipoTransporte { TipoTransporteId = 1, Descripcion = "Descripcion Test" };
-            var listaTipoTransporteExistentes = new List<TipoTransporte> { tipoTransporte };
+            var tipoTransporte = new TipoTransporte { TipoTransporteId = 1, Descripcion = "Tipo Transporte Descripcion Test" };
+            var tipoTransporte2 = new TipoTransporte { TipoTransporteId = 2, Descripcion = "Tipo Transporte Descripcion Test2" };
+            var listaTipoTransporteExistentes = new List<TipoTransporte> { tipoTransporte, tipoTransporte2 };
 
-            var transporteRequest = new TransporteRequest { CompaniaTransporteId = 1, TipoTransporteId = 1 };
+            var transporteRequest = new TransporteRequest { CompaniaTransporteId = 2, TipoTransporteId = 2 };
 
             var transporte = new Transporte { TransporteId = 1, TipoTransporte = tipoTransporte, TipoTransporteId = 1, CompaniaTransporte = compania, CompaniaTransporteId = 1 };
             
@@ -106,7 +108,7 @@ namespace UnitTestTransporteApi.TransporteTest
             var listaCompaniasExistentes = new List<CompaniaTransporte>();
             var compania = new CompaniaTransporte { CompaniaTransporteId = 1, Cuit = "Test cuit", RazonSocial = "Test Razon Social", ImagenLogo = "Test Imagen" };
 
-            var tipoTransporte = new TipoTransporte { TipoTransporteId = 1, Descripcion = "Descripcion Test" };
+            var tipoTransporte = new TipoTransporte { TipoTransporteId = 1, Descripcion = "Tipo Transporte Descripcion Test" };
 
             var transporte = new Transporte { TransporteId = 1, TipoTransporte = tipoTransporte, TipoTransporteId = 1, CompaniaTransporte = compania, CompaniaTransporteId = 1 };
 

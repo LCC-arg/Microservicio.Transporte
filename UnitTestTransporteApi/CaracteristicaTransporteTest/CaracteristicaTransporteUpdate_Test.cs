@@ -31,15 +31,15 @@ namespace UnitTestTransporteApi.CaracteristicaTransporteTest
             //Arrange
             var compania = new CompaniaTransporte { CompaniaTransporteId = 1, Cuit = "Test cuit", RazonSocial = "Test Razon Social", ImagenLogo = "Test Imagen" };
             var compania2 = new CompaniaTransporte { CompaniaTransporteId = 2, Cuit = "Test cuit2", RazonSocial = "Test Razon Social2", ImagenLogo = "Test Imagen2" };
-            var tipoTransporte = new TipoTransporte { TipoTransporteId = 1, Descripcion = "Descripcion Test" };
-            var tipoTransporte2 = new TipoTransporte { TipoTransporteId = 2, Descripcion = "Descripcion Test2" };
+            var tipoTransporte = new TipoTransporte { TipoTransporteId = 1, Descripcion = "Tipo Transporte Descripcion Test" };
+            var tipoTransporte2 = new TipoTransporte { TipoTransporteId = 2, Descripcion = "Tipo Transporte Descripcion Test2" };
             var transporte = new Transporte { TransporteId = 1, TipoTransporte = tipoTransporte, TipoTransporteId = 1, CompaniaTransporte = compania, CompaniaTransporteId = 1 };
             var transporte2 = new Transporte { TransporteId = 2, TipoTransporte = tipoTransporte2, TipoTransporteId = 2, CompaniaTransporte = compania2, CompaniaTransporteId = 2 };
-            var caracteristica = new Caracteristica { CaracteristicaId = 1, Descripcion = "Descripcion Test" };
-            var caracteristica2 = new Caracteristica { CaracteristicaId = 2, Descripcion = "Descripcion Test2" };
-
+            var caracteristica = new Caracteristica { CaracteristicaId = 1, Descripcion = "Caracteristica Descripcion Test" };
+            var caracteristica2 = new Caracteristica { CaracteristicaId = 2, Descripcion = "Caracteristica Descripcion Test2" };
             var listaCaracteristica = new List<Caracteristica> { caracteristica, caracteristica2 };
             var listaTransporte = new List<Transporte> { transporte, transporte2 };
+;
 
             var caracteristicaTransporte = new CaracteristicaTransporte
             {
@@ -99,15 +99,16 @@ namespace UnitTestTransporteApi.CaracteristicaTransporteTest
             //Arrange
             var compania = new CompaniaTransporte { CompaniaTransporteId = 1, Cuit = "Test cuit", RazonSocial = "Test Razon Social", ImagenLogo = "Test Imagen" };
             var compania2 = new CompaniaTransporte { CompaniaTransporteId = 2, Cuit = "Test cuit2", RazonSocial = "Test Razon Social2", ImagenLogo = "Test Imagen2" };
-            var tipoTransporte = new TipoTransporte { TipoTransporteId = 1, Descripcion = "Descripcion Test" };
-            var tipoTransporte2 = new TipoTransporte { TipoTransporteId = 2, Descripcion = "Descripcion Test2" };
+            var tipoTransporte = new TipoTransporte { TipoTransporteId = 1, Descripcion = "Tipo Transporte Descripcion Test" };
+            var tipoTransporte2 = new TipoTransporte { TipoTransporteId = 2, Descripcion = "Tipo Transporte Descripcion Test2" };
             var transporte = new Transporte { TransporteId = 1, TipoTransporte = tipoTransporte, TipoTransporteId = 1, CompaniaTransporte = compania, CompaniaTransporteId = 1 };
             var transporte2 = new Transporte { TransporteId = 2, TipoTransporte = tipoTransporte2, TipoTransporteId = 2, CompaniaTransporte = compania2, CompaniaTransporteId = 2 };
-            var caracteristica = new Caracteristica { CaracteristicaId = 1, Descripcion = "Descripcion Test" };
-            var caracteristica2 = new Caracteristica { CaracteristicaId = 2, Descripcion = "Descripcion Test2" };
+            var caracteristica = new Caracteristica { CaracteristicaId = 1, Descripcion = "Caracteristica Descripcion Test" };
+            var caracteristica2 = new Caracteristica { CaracteristicaId = 2, Descripcion = "Caracteristica Descripcion Test2" };
+            var listaTransporte = new List<Transporte> { transporte, transporte2 };
 
             var listaCaracteristica = new List<Caracteristica> { caracteristica };
-            var listaTransporte = new List<Transporte> { transporte, transporte2 };
+
 
             var caracteristicaTransporte = new CaracteristicaTransporte
             {
@@ -128,7 +129,7 @@ namespace UnitTestTransporteApi.CaracteristicaTransporteTest
 
             var service = new CaracteristicaTransporteService(mockCaracteristicaTransporteCommand.Object, mockCaracteristicaTransporteQuery.Object, mockCaracteristicaQuery.Object, mockTransporteQuery.Object);
 
-            //Act
+            //Act & Assert
             Assert.Throws<ValorBadRequestException>(() => service.UpdateCaracteristicaTransporte(1, caracteristicaTransporteRequest));
 
         }
@@ -168,7 +169,7 @@ namespace UnitTestTransporteApi.CaracteristicaTransporteTest
 
             var service = new CaracteristicaTransporteService(mockCaracteristicaTransporteCommand.Object, mockCaracteristicaTransporteQuery.Object, mockCaracteristicaQuery.Object, mockTransporteQuery.Object);
 
-            //Act
+            //Act & Assert
             Assert.Throws<ValorBadRequestException>(() => service.UpdateCaracteristicaTransporte(1, caracteristicaTransporteRequest));
 
         }

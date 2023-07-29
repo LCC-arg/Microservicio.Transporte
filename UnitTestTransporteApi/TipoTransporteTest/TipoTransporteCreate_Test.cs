@@ -27,7 +27,7 @@ namespace UnitTestTransporteApi.TipoTransporteTest
             mockTipoTransporteQuery.Setup(q => q.GetAllTipoTransporte()).Returns(new List<TipoTransporte>());
             var tipoTransporteRequest = new TipoTransporteRequest
             {
-                Descripcion = "Descripcion Test"
+                Descripcion = " Tipo Transporte Descripcion Test"
             };
             var service = new TipoTransporteService(mockTipoTransporteCommand.Object, mockTipoTransporteQuery.Object);
             
@@ -45,7 +45,7 @@ namespace UnitTestTransporteApi.TipoTransporteTest
             {
                 new TipoTransporte
                 {
-                    Descripcion = "Descripcion Test"
+                    Descripcion = "Tipo Transporte Descripcion Test"
                 }
             };
             mockTipoTransporteQuery.Setup(q => q.GetAllTipoTransporte()).Returns(listaTipoTransporteExistentes);
@@ -54,7 +54,7 @@ namespace UnitTestTransporteApi.TipoTransporteTest
 
             var Request = new TipoTransporteRequest
             {
-                Descripcion = "Descripcion Test"
+                Descripcion = "Tipo Transporte Descripcion Test"
             };
 
             // Act & Assert
